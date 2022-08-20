@@ -4,15 +4,8 @@ import { CategoryToPackages } from './src/category-to-packages.mjs';
 const PLUGINS_REDIRECTS = Object.entries(CategoryToPackages).flatMap(([category, packageNames]) =>
   packageNames.map(packageName => [`/plugins/${packageName}`, `/plugins/${category}/${packageName}`])
 );
-
-// TODO: Fix and use the correct branch name here, instead of the experimental branch
-const basePath =
-  process.env.NODE_ENV === 'development' || process.env.CF_PAGES_BRANCH !== 'add-base-path' || process.env.GITHUB_ACTION
-    ? undefined
-    : '/graphql/codegen';
-
 export default withGuildDocs({
-  basePath,
+  basePath: process.env.NEXT_BASE_PATH,
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -24,6 +17,7 @@ export default withGuildDocs({
     ],
     images: {
       unoptimized: true, // doesn't work with `next export`
+      allowFutureImage: true,
     },
   },
   typescript: {
