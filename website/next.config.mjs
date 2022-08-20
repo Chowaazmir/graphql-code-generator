@@ -23,6 +23,9 @@ export default withGuildDocs({
       'https://raw.githubusercontent.com/mswjs/msw/HEAD/media/msw-logo.svg',
     ],
   },
+  images: {
+    unoptimized: true // doesn't work with `next export`
+  },
   typescript: {
     // Todo: remove it before merge to master
     ignoreBuildErrors: true,
