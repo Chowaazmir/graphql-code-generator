@@ -87,7 +87,7 @@ export default function LiveDemo(): ReactElement {
               {o.tags?.map(t => {
                 const icon = icons[t];
                 return icon ? (
-                  <Image key={t} {...icon} placeholder="none" loading="eager" className="max-h-[20px] w-auto" />
+                  <Image key={t} src={icon} placeholder="empty" loading="eager" className="max-h-[20px] w-auto" />
                 ) : (
                   <span key={t} className="rounded-lg bg-gray-200 px-2 text-xs text-gray-800">
                     {t}

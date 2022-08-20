@@ -21,7 +21,7 @@ export function IndexPage(): ReactElement {
         version={<NPMBadge name="@graphql-codegen/cli" />}
         colors={['#1dbbff', '#ee1cd9']}
         image={{
-          ...gqlCodegenCover,
+          src: gqlCodegenCover,
           loading: 'eager',
           placeholder: 'empty',
           alt: 'Illustration',
@@ -34,7 +34,7 @@ export function IndexPage(): ReactElement {
         title="Generate Code Instantly"
         description="Generate code from your GraphQL schema and GraphQL operations with a single function call regardless of your environment or code format."
         image={{
-          ...gqlGenerateCodeIllustration,
+          src: gqlGenerateCodeIllustration,
           loading: 'eager',
           placeholder: 'empty',
           alt: 'Illustration',
@@ -48,7 +48,7 @@ export function IndexPage(): ReactElement {
         title="Customize Easily"
         description="Generate code from your GraphQL schema and GraphQL operations with a single function call regardless of your environment or code format"
         image={{
-          ...gqlWatchForChangesIllustration,
+          src: gqlWatchForChangesIllustration,
           loading: 'eager',
           placeholder: 'empty',
           alt: 'Customize Easily',
